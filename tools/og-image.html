@@ -1,0 +1,59 @@
+<!doctype html>
+<!--
+  Source for assets/img/og-image.png, the preview image shown when the site is
+  shared on WhatsApp and elsewhere. To regenerate after changing the name or
+  wording, serve the repo locally and screenshot this page at 1200 × 630:
+
+    python3 -m http.server 8000
+    "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --headless=new \
+      --hide-scrollbars --window-size=1200,630 --virtual-time-budget=3000 \
+      --screenshot=assets/img/og-image.png http://localhost:8000/tools/og-image.html
+-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>OG image</title>
+  <link rel="stylesheet" href="../assets/css/site.css">
+  <style>
+    html, body { width: 1200px; height: 630px; overflow: hidden; }
+    .hero { height: 630px; display: grid; place-items: center; padding: 0; border: 0; }
+    .hero__card { width: 760px; max-width: none; padding: 46px 64px 44px; }
+    .hero__crest { width: 52px; height: 52px; margin-bottom: 16px; }
+    .eyebrow { font-size: 15px; margin-bottom: 14px; }
+    .title { margin-bottom: 18px; }
+    .title__top { font-size: 40px; }
+    .title__by { font-size: 26px; }
+    .title__name { font-size: 200px; }
+    .og-tag { margin: 18px 0 0; font-size: 26px; font-style: italic; color: var(--cream); }
+  </style>
+</head>
+<body>
+  <div class="hero on-dark">
+    <div class="hero__card">
+      <span class="corner corner--tl"></span>
+      <span class="corner corner--tr"></span>
+      <span class="corner corner--bl"></span>
+      <span class="corner corner--br"></span>
+      <svg class="hero__crest" viewBox="0 0 64 64" aria-hidden="true">
+        <g fill="none" stroke="currentColor">
+          <circle cx="32" cy="32" r="30" stroke-width="1.25"/>
+          <circle cx="32" cy="32" r="25.5" stroke-width="0.75" opacity="0.6"/>
+          <path d="M24 24a8 8 0 0 1 16 0a8 8 0 0 1 0 16a8 8 0 0 1 -16 0a8 8 0 0 1 0 -16z" stroke-width="1.5"/>
+        </g>
+        <g fill="currentColor">
+          <circle cx="32" cy="32" r="2.2"/>
+          <path d="M18.6 16.1l2.5 2.5-2.5 2.5-2.5-2.5zM45.4 16.1l2.5 2.5-2.5 2.5-2.5-2.5zM45.4 42.9l2.5 2.5-2.5 2.5-2.5-2.5zM18.6 42.9l2.5 2.5-2.5 2.5-2.5-2.5z"/>
+        </g>
+      </svg>
+      <p class="eyebrow">In-home pet care · Asturias, Spain</p>
+      <h1 class="title">
+        <span class="title__top">Pet Sitting</span>
+        <span class="title__by">by</span>
+        <span class="title__name">Esther</span>
+      </h1>
+      <span class="ornament"></span>
+      <p class="og-tag">Dogs, cats &amp; smaller companions, cared for at home</p>
+    </div>
+  </div>
+</body>
+</html>
